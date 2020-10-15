@@ -1,10 +1,10 @@
 # icu is needed for the chromium 71 version as it need the inspector module as part of the build
 # http://lists.openembedded.org/pipermail/openembedded-devel/2018-September/120658.html
 
-DEPENDS_append = " pkgconfig-native icu"
+DEPENDS_append_imx = " pkgconfig-native icu"
 
 # Override the do_configure () to include icu changes
-do_configure () {
+do_configure_imx () {
     rm -rf ${S}/deps/openssl
     export LD="${CXX}"
     GYP_DEFINES="${GYP_DEFINES}" export GYP_DEFINES

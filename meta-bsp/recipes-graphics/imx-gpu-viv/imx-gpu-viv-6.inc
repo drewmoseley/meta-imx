@@ -40,7 +40,7 @@ EXTRA_PROVIDES_append_mx8qm = " \
 PROVIDES_OPENVX       = ""
 PROVIDES_OPENVX_mx8   = "virtual/libopenvx"
 PROVIDES_OPENVX_mx8mm = ""
-PROVIDES += " \
+PROVIDES_append_imx = " \
     imx-gpu-viv \
     libgal-imx \
     opencl-headers \

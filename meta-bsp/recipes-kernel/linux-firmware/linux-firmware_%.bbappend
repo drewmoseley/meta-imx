@@ -1,9 +1,9 @@
 # Copyright 2017-2020 NXP
 
-FILESEXTRAPATHS_prepend := "${THISDIR}/files:"
+FILESEXTRAPATHS_prepend_imx := "${THISDIR}/files:"
 
 # Firmware for Murata QCA Modules
-SRC_URI += " \
+SRC_URI_append_imx = " \
             git://github.com/murata-wireless/qca-linux-calibration.git;protocol=https;name=murata-qca;destsuffix=murata-qca \
 "
 SRCREV_murata-qca = "a0026b646ce6adfb72f135ffa8a310f3614b2272"
@@ -11,8 +11,8 @@ SRCREV_murata-qca = "a0026b646ce6adfb72f135ffa8a310f3614b2272"
 # Firmware for Murata CYW4339/CYW43430/CYW43455/CYW4356/CYW4359 Module
 # Firmware for Marvell Wi-Fi Modules
 IMX_FIRMWARE_SRC ?= "git://github.com/NXP/imx-firmware.git;protocol=https"
-SRCBRANCH = "master"
-SRC_URI += " \
+SRCBRANCH_imx = "master"
+SRC_URI_append_imx = " \
            ${IMX_FIRMWARE_SRC};branch=${SRCBRANCH};destsuffix=imx-firmware;name=imx-firmware \
 "
 
@@ -20,7 +20,7 @@ SRCREV_imx-firmware = "484d38224fa2c26b8859a7bf20b7c4d49100f5bc"
 
 SRCREV_FORMAT = "default_murata-qca_imx-firmware"
 
-do_install_append () {
+do_install_append_imx () {
     # Use Murata's QCA calibration files
     install -m 0644 ${WORKDIR}/murata-qca/1CQ/board.bin ${D}${nonarch_base_libdir}/firmware/ath10k/QCA6174/hw3.0/
 
@@ -74,50 +74,50 @@ do_install_append () {
 }
 
 # Use the latest version of sdma firmware in firmware-imx
-PACKAGES_remove = "${PN}-imx-sdma-license ${PN}-imx-sdma-imx6q ${PN}-imx-sdma-imx7d"
-PACKAGES =+ " ${PN}-bcm4359-pcie ${PN}-nxp8987"
+PACKAGES_remove_imx = "${PN}-imx-sdma-license ${PN}-imx-sdma-imx6q ${PN}-imx-sdma-imx7d"
+PACKAGES_append_imx = " ${PN}-bcm4359-pcie ${PN}-nxp8987 "
 
-FILES_${PN}-bcm4339 += " \
+FILES_${PN}-bcm4339_append_imx = " \
        ${nonarch_base_libdir}/firmware/brcm/brcmfmac4339-sdio.txt \
        ${sysconfdir}/firmware/BCM4335C0.ZP.hcd \
 "
 
-FILES_${PN}-bcm43430 += " \
+FILES_${PN}-bcm43430_append_imx = " \
        ${nonarch_base_libdir}/firmware/brcm/brcmfmac43430-sdio.clm_blob \
        ${nonarch_base_libdir}/firmware/brcm/brcmfmac43430-sdio.txt \
        ${sysconfdir}/firmware/BCM43430A1.1DX.hcd \
 "
 
-FILES_${PN}-bcm43455 += " \
+FILES_${PN}-bcm43455_append_imx = " \
        ${nonarch_base_libdir}/firmware/brcm/brcmfmac43455-sdio.clm_blob \
        ${nonarch_base_libdir}/firmware/brcm/brcmfmac43455-sdio.txt \
        ${sysconfdir}/firmware/BCM4345C0.1MW.hcd \
 "
 
-FILES_${PN}-bcm4356-pcie += " \
+FILES_${PN}-bcm4356-pcie_append_imx = " \
        ${nonarch_base_libdir}/firmware/brcm/brcmfmac4356-pcie.clm_blob \
        ${nonarch_base_libdir}/firmware/brcm/brcmfmac4356-pcie.txt \
        ${sysconfdir}/firmware/BCM4354A2.1CX.hcd \
 "
 
-LICENSE_${PN}-bcm4359-pcie = "Firmware-cypress"
-RDEPENDS_${PN}-bcm4359-pcie += "${PN}-cypress-license"
+LICENSE_${PN}-bcm4359-pcie_imx = "Firmware-cypress"
+RDEPENDS_${PN}-bcm4359-pcie_append_imx = "${PN}-cypress-license"
 
-FILES_${PN}-bcm4359-pcie = " \
+FILES_${PN}-bcm4359-pcie_imx = " \
        ${nonarch_base_libdir}/firmware/brcm/brcmfmac4359-pcie.bin \
        ${nonarch_base_libdir}/firmware/brcm/brcmfmac4359-pcie.clm_blob \
        ${nonarch_base_libdir}/firmware/brcm/brcmfmac4359-pcie.txt \
        ${sysconfdir}/firmware/BCM4349B1_*.hcd \
 "
 
-FILES_${PN}-pcie8997 += " \
+FILES_${PN}-pcie8997_append_imx = " \
        ${nonarch_base_libdir}/firmware/mrvl/helper_uart_3000000.bin \
        ${nonarch_base_libdir}/firmware/mrvl/uart8997_bt_v4.bin \
        ${datadir}/mrvl_wireless/bin_pcie8997/fw_loader_arm64 \
 "
 
 
-FILES_${PN}-nxp8987 = " \
+FILES_${PN}-nxp8987_imx = " \
        ${nonarch_base_libdir}/firmware/nxp/sdiouart8987_combo_v0.bin \
        ${nonarch_base_libdir}/firmware/nxp/wifi_mod_para_sd8987.conf \
 "

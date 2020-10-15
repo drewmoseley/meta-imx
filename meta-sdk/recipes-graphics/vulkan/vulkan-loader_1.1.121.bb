@@ -6,6 +6,7 @@ the vulkaninfo utility."
 HOMEPAGE = "https://www.khronos.org/vulkan/"
 BUGTRACKER = "https://github.com/KhronosGroup/Vulkan-Loader"
 SECTION = "libs"
+COMPATIBLE_MACHINE = "(mx6|mx7|mx8)"
 
 LICENSE = "Apache-2.0"
 LIC_FILES_CHKSUM = "file://LICENSE.txt;md5=7dbefed23242760aa3475ee42801c5ac"

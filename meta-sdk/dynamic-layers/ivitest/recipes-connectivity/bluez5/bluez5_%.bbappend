@@ -1,1 +1,1 @@
-RDEPENDS_${PN}-test = "python3-core"
+RDEPENDS_${PN}-test_imx = "python3-core"

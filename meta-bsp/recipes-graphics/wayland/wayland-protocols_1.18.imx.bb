@@ -1,4 +1,5 @@
 require recipes-graphics/wayland/wayland-protocols_1.17.imx.bb
+COMPATIBLE_MACHINE = "(mx6|mx7|mx8)"
 
 WAYLAND_PROTOCOLS_SRC ?= "git://source.codeaurora.org/external/imx/wayland-protocols-imx.git;protocol=https"
 SRCBRANCH = "wayland-protocols-imx-1.18"

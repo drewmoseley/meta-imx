@@ -3,6 +3,7 @@ DESCRIPTION = "{fmt} is an open-source formatting library for C++. It can be use
 HOMEPAGE = "https://fmt.dev"
 LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://LICENSE.rst;md5=af88d758f75f3c5c48a967501f24384b"
+COMPATIBLE_MACHINE = "(mx6|mx7|mx8)"
 
 SRC_URI = "https://github.com/fmtlib/fmt/releases/download/${PV}/${BP}.zip"
 SRC_URI[md5sum] = "63264893108c311c948a75ccb9a5f9f6"

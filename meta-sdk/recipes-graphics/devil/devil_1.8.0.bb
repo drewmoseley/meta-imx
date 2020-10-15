@@ -3,6 +3,7 @@ SECTION = "libs"
 LICENSE = "LGPL-2.1"
 LIC_FILES_CHKSUM = "file://${COMMON_LICENSE_DIR}/LGPL-2.1;md5=1a6d268fd218675ffea8be556788b780"
 PR = "r0"
+COMPATIBLE_MACHINE="(mx6|mx7|mx8)"
 
 DEPENDS = "libpng jpeg tiff xz"
 

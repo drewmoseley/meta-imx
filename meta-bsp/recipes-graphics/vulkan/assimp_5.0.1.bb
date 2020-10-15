@@ -2,6 +2,7 @@ DESCRIPTION = "Open Asset Import Library is a portable Open Source library to im
                various well-known 3D model formats in a uniform manner."
 HOMEPAGE = "http://www.assimp.org/"
 SECTION = "devel"
+COMPATIBLE_MACHINE = "(mx6|mx7|mx8)"
 
 LICENSE = "BSD-3-Clause"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=2119edef0916b0bd511cb3c731076271"

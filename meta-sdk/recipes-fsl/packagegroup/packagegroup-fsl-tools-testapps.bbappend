@@ -1,6 +1,6 @@
 # Add needed Freescale packages and definitions
 
-PACKAGES += " \
+PACKAGES_append_imx = " \
     ${PN}-fslcodec-testapps \
 "
 
@@ -28,7 +28,7 @@ SOC_TOOLS_TEST_append_imxgpu = " imx-gpu-viv-demos"
 SOC_TOOLS_TEST_append_mx8qm  = " imx-seco-libs dvbapp-tests"
 SOC_TOOLS_TEST_append_mx8x   = " imx-seco-libs"
 
-RDEPENDS_${PN} += " \
+RDEPENDS_${PN}_append_imx = " \
     can-utils \
     coreutils \
     cpufrequtils \

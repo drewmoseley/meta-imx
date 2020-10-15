@@ -1,5 +1,6 @@
 # Copyright 2017 NXP
 # Released under the MIT license (see COPYING.MIT for the terms)
+COMPATIBLE_MACHINE = "(mx6|mx7|mx8)"
 
 SUMMARY = "i.MX package group - embedded RPC"
 DESCRIPTION = "Contains the modules needed by eRPC."

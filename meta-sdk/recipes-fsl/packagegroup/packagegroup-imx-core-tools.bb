@@ -1,5 +1,6 @@
 # Copyright 2018-2020 NXP
 # Released under the MIT license (see COPYING.MIT for the terms)
+COMPATIBLE_MACHINE = "(mx6|mx7|mx8)"
 
 DESCRIPTION = "Packagegroup to provide necessary tools for basic core image"
 

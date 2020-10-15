@@ -4,6 +4,7 @@ DESCRIPTION = "This project provides Vulkan tools and utilities that \
                applications correct use of the Vulkan API."
 SECTION = "graphics"
 HOMEPAGE = "https://github.com/LunarG/VulkanTools"
+COMPATIBLE_MACHINE = "(mx6|mx7|mx8)"
 
 DEPENDS = "vulkan-headers vulkan-loader"
 

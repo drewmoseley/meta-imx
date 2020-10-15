@@ -1,3 +1,3 @@
 
-COMPATIBLE_MACHINE = "(mx8)"
+COMPATIBLE_MACHINE_imx = "(mx8)"
 COMPATIBLE_MACHINE_mx8mm = "(^$)"

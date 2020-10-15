@@ -1,4 +1,6 @@
 FILESEXTRAPATHS_prepend := "${THISDIR}/files:"
+COMPATIBLE_MACHINE = "(mx6|mx7|mx8)"
+
 require xen.inc
 
 SRCBRANCH = "imx_5.4.47_2.2.0"

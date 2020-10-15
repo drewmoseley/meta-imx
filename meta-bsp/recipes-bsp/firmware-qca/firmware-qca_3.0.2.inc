@@ -1,4 +1,5 @@
 # Copyright 2018-2019 NXP
+COMPATIBLE_MACHINE = "(mx6|mx7|mx8)"
 
 SUMMARY = "Qualcomm Wi-Fi and Bluetooth firmware"
 SECTION = "base"

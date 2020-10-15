@@ -1,6 +1,7 @@
 require recipes-support/opencv/opencv_4.1.0.bb
 
-FILESEXTRAPATHS_prepend := "${BSPDIR}/sources/meta-openembedded/meta-oe/recipes-support/opencv/opencv:"
+FILESEXTRAPATHS_prepend_imx := "${BSPDIR}/sources/meta-openembedded/meta-oe/recipes-support/opencv/opencv:"
+COMPATIBLE_MACHINE = "(mx6|mx7|mx8)"
 
 LIC_FILES_CHKSUM = "file://LICENSE;md5=014935351b2df6f3094bf25de8d50ed8"
 

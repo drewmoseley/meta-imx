@@ -1,10 +1,10 @@
-FILESEXTRAPATHS_prepend := "${THISDIR}/${BPN}:"
+FILESEXTRAPATHS_prepend_imx := "${THISDIR}/${BPN}:"
 
-SRC_URI += " \
+SRC_URI_append_imx = " \
             file://0001-systemd-udevd.service.in-Set-PrivateMounts-to-no-to-.patch \
             file://0020-logind.conf-Set-HandlePowerKey-to-ignore.patch \
 "
-do_install_append () {
+do_install_append_imx () {
     # Disable the assignment of the fixed network interface name
     install -d ${D}${sysconfdir}/systemd/network
     ln -s /dev/null ${D}${sysconfdir}/systemd/network/99-default.link

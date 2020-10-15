@@ -4,6 +4,7 @@ mathematics library for graphics software based on the OpenGL \
 Shading Language (GLSL) specifications."
 HOMEPAGE = "https://glm.g-truc.net"
 BUGTRACKER = "https://github.com/g-truc/glm/issues"
+COMPATIBLE_MACHINE = "(mx6|mx7|mx8)"
 
 SECTION = "libs"
 

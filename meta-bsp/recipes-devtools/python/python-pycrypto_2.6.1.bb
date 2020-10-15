@@ -3,6 +3,7 @@ HOMEPAGE = "http://www.pycrypto.org/"
 SECTION = "devel/python"
 LICENSE = "PSFv2"
 LIC_FILES_CHKSUM = "file://COPYRIGHT;md5=35f354d199e8cb7667b059a23578e63d"
+COMPATIBLE_MACHINE = "(mx6|mx7|mx8)"
 
 SRCNAME = "pycrypto"
 

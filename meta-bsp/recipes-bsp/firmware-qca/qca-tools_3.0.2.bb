@@ -1,4 +1,5 @@
 # Copyright 2018 NXP
+COMPATIBLE_MACHINE = "(mx6|mx7|mx8)"
 
 require firmware-qca_${PV}.inc
 

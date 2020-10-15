@@ -2,23 +2,23 @@
 # Copyright (C) 2013-2016 Freescale Semiconductor
 # Copyright 2017-2018 NXP
 
-FILESEXTRAPATHS_prepend := "${THISDIR}/${BPN}:"
+FILESEXTRAPATHS_prepend_imx := "${THISDIR}/${BPN}:"
 
-SRCBRANCH = "imx_5.4.47_2.2.0"
+SRCBRANCH_imx = "imx_5.4.47_2.2.0"
 IMXTEST_SRC ?= "git://source.codeaurora.org/external/imx/imx-test.git;protocol=https"
-SRC_URI = " \
+SRC_URI_imx = " \
     ${IMXTEST_SRC};branch=${SRCBRANCH} \
     file://0001-pxp-test-Fix-format-security-error.patch \
     file://memtool_profile \
 "
 
-SRCREV = "31623a4972bf6f2f4239b4667aeb33baba07a3c8"
+SRCREV_imx = "31623a4972bf6f2f4239b4667aeb33baba07a3c8"
 
 PACKAGECONFIG_append_mx8m = " swpdm"
 
 PACKAGECONFIG[swpdm] = "HAS_IMX_SW_PDM=true,HAS_IMX_SW_PDM=false,imx-sw-pdm"
 
-do_compile() {
+do_compile_imx() {
     CFLAGS="${TOOLCHAIN_OPTIONS}"
     oe_runmake V=1 VERBOSE='' \
                CROSS_COMPILE=${TARGET_PREFIX} \

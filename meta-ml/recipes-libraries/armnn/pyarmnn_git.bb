@@ -1,6 +1,7 @@
 SUMMARY = "Python Wrapper for armnn"
 LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=7b94dcac13999be0b219832a72afef36"
+COMPATIBLE_MACHINE = "(mx6|mx7|mx8)"
 
 DEPENDS = "python3 python3-pip-native python3-wheel-native"
 

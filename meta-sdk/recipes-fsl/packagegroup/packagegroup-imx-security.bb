@@ -2,6 +2,7 @@
 # Released under the MIT license (see COPYING.MIT for the terms)
 
 DESCRIPTION = "Packagegroup for i.MX security packages"
+COMPATIBLE_MACHINE = "(mx6|mx7|mx8)"
 
 PACKAGE_ARCH = "${MACHINE_ARCH}"
 

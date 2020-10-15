@@ -2,6 +2,7 @@ DESCRIPTION = "cross-platform, high performance scoring engine for ML models"
 SECTION = "devel"
 LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=980784f0a7f667becbed133924b263bf"
+COMPATIBLE_MACHINE = "(mx6|mx7|mx8)"
 
 DEPENDS = "libpng zlib ${BPN}-native"
 

@@ -1,2 +1,2 @@
-DEPENDS_append = " virtual/libgl"
+DEPENDS_append_imx = " virtual/libgl"
 

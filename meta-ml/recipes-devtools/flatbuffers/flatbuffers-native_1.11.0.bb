@@ -2,6 +2,7 @@ SUMMARY = "Memory Efficient Serialization Library"
 HOMEPAGE = "https://github.com/google/flatbuffers"
 SECTION = "console/tools"
 LICENSE = "Apache-2.0"
+COMPATIBLE_MACHINE = "(mx6|mx7|mx8)"
 
 LIC_FILES_CHKSUM = "file://LICENSE.txt;md5=a873c5645c184d51e0f9b34e1d7cf559"
 

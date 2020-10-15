@@ -6,6 +6,8 @@ to test the several hardware accelerated graphics APIs including packages not \
 provided by Freescale."
 SUMMARY = "FSL Community Package group - tools/gpu/external"
 
+COMPATIBLE_MACHINE = "(mx6|mx7|mx8)"
+
 PACKAGE_ARCH = "${MACHINE_ARCH}"
 
 inherit packagegroup

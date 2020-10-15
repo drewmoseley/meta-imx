@@ -1,2 +1,2 @@
 # Disable hostapd service when system boot up
-INITSCRIPT_NAME = ""
+INITSCRIPT_NAME_imx = ""

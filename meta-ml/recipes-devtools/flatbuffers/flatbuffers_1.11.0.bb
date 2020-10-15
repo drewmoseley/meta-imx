@@ -2,6 +2,7 @@ SUMMARY = "Memory Efficient Serialization Library"
 HOMEPAGE = "https://github.com/google/flatbuffers"
 SECTION = "console/tools"
 LICENSE = "Apache-2.0"
+COMPATIBLE_MACHINE = "(mx6|mx7|mx8)"
 
 DEPENDS += " ${BPN}-native"
 

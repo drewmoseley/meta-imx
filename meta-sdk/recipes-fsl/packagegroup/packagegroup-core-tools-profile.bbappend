@@ -1,1 +1,1 @@
-VALGRIND_aarch64 = "valgrind"
+VALGRIND_aarch64_imx = "valgrind"

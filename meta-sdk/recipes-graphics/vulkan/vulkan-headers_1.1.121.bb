@@ -2,6 +2,7 @@ SUMMARY = "Vulkan Header files and API registry"
 DESCRIPTION = "Vulkan is a new generation graphics and compute API \
 that provides efficient access to modern GPUs."
 HOMEPAGE = "https://www.khronos.org/vulkan/"
+COMPATIBLE_MACHINE = "(mx6|mx7|mx8)"
 
 LICENSE = "Apache-2.0"
 LIC_FILES_CHKSUM = "file://LICENSE.txt;md5=3b83ef96387f14655fc854ddc3c6bd57"

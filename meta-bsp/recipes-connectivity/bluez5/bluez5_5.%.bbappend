@@ -1,11 +1,11 @@
-FILESEXTRAPATHS_prepend := "${THISDIR}/files:"
+FILESEXTRAPATHS_prepend_imx := "${THISDIR}/files:"
 
 # Do not start the service during system boot up
-INITSCRIPT_PARAMS_${PN} = "stop 20 0 1 6 ."
+INITSCRIPT_PARAMS_${PN}_imx = "stop 20 0 1 6 ."
 
 # Add patch for module bcm43xx
 # Add patches for QCA modules with Qca6174 and Qca9377-3 chips
-SRC_URI += " \
+SRC_URI_append_imx = " \
             file://0001-bluetooth-Add-bluetooth-support-for-QCA6174-chip.patch \
             file://0002-hciattach-set-flag-to-enable-HCI-reset-on-init.patch \
             file://0003-hciattach-instead-of-strlcpy-with-strncpy-to-avoid-r.patch \

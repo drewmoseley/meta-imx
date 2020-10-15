@@ -16,6 +16,7 @@ PACKAGECONFIG ??= " \
     ${@bb.utils.contains('DISTRO_FEATURES', 'systemd', 'systemd', '', d)} \
     ${@bb.utils.contains('XEN_TARGET_ARCH', 'x86_64', 'hvm', '', d)} \
     "
+PACKAGECONFIG_remove_imx = "hvm"
 
 FLASK_POLICY_FILE ?= "xenpolicy-${PV}"
 

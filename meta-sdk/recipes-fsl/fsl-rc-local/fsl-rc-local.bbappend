@@ -1,2 +1,2 @@
 #Provide our own rc.local file
-FILESEXTRAPATHS_prepend := "${THISDIR}/files:"
+FILESEXTRAPATHS_prepend_imx := "${THISDIR}/files:"

@@ -1,10 +1,10 @@
 
 # choose wayland
-PACKAGECONFIG = "${@bb.utils.contains('DISTRO_FEATURES', 'wayland', 'wayland', '' ,d)}"
+PACKAGECONFIG_imx = "${@bb.utils.contains('DISTRO_FEATURES', 'wayland', 'wayland', '' ,d)}"
 
-EXTRA_OECMAKE = "-DBUILD_CUBE=OFF"
+EXTRA_OECMAKE_imx = "-DBUILD_CUBE=OFF"
 
-RDEPENDS_${PN} += "libvulkan-imx"
+RDEPENDS_${PN}_append_imx = " libvulkan-imx "
 
 COMPATIBLE_MACHINE = "(mx8)"
 COMPATIBLE_MACHINE_mx8mm = "(^$)"

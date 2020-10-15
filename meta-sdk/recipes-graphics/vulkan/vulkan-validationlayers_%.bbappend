@@ -1,19 +1,19 @@
-FILESEXTRAPATHS_prepend := "${THISDIR}/${BPN}:"
+FILESEXTRAPATHS_prepend_imx := "${THISDIR}/${BPN}:"
 
-SRC_URI += " \
+SRC_URI_append_imx = " \
     file://icd_VSI.json \
     file://0001-CMakeLists.txt-Change-the-installation-path-of-JSON-.patch \
 "
 # choose wayland
-PACKAGECONFIG = "${@bb.utils.contains('DISTRO_FEATURES', 'wayland', 'wayland', '' ,d)}"
+PACKAGECONFIG_imx = "${@bb.utils.contains('DISTRO_FEATURES', 'wayland', 'wayland', '' ,d)}"
 
-DEPENDS += " virtual/egl glslang spirv-tools"
+DEPENDS_append_imx = " virtual/egl glslang spirv-tools "
 
-EXTRA_OECMAKE_remove = "-DBUILD_LAYERS=OFF"
+EXTRA_OECMAKE_remove_imx = "-DBUILD_LAYERS=OFF"
 # Enable validation layers
-EXTRA_OECMAKE_append = " -DBUILD_LAYERS=ON"
+EXTRA_OECMAKE_append_imx = " -DBUILD_LAYERS=ON"
 
-do_install_append () {
+do_install_append_imx () {
 
     install -d ${D}${sysconfdir}/vulkan/icd.d
     cp ${WORKDIR}/icd_VSI.json ${D}${sysconfdir}/vulkan/icd.d
@@ -21,11 +21,11 @@ do_install_append () {
     sed -i "s,1.0.30,${PV}," ${D}${sysconfdir}/vulkan/icd.d/icd_VSI.json
 }
 
-FILES_SOLIBSDEV = ""
-FILES_${PN} += "${libdir}/libVkLayer_*.so"
+FILES_SOLIBSDEV_imx = ""
+FILES_${PN}_append_imx = " ${libdir}/libVkLayer_*.so "
 
 # The package libvulkan-imx is required to configure the imx-gpu-viv vulkan drivers for the validation layers
-RDEPENDS_${PN} += "libvulkan-imx"
+RDEPENDS_${PN}_append_imx = " libvulkan-imx "
 
 INSANE_SKIP_${PN} = "dev-so"
 

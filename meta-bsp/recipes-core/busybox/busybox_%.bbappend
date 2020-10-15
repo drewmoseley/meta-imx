@@ -1,6 +1,6 @@
 
 # look for files in the layer first
-FILESEXTRAPATHS_prepend := "${THISDIR}/${PN}:"
+FILESEXTRAPATHS_prepend_imx := "${THISDIR}/${PN}:"
 
-SRC_URI += "file://ftpget.cfg"
+SRC_URI_append_imx = " file://ftpget.cfg "
 

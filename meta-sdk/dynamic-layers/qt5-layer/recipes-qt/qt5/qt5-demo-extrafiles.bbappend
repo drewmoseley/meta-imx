@@ -1,5 +1,5 @@
 # Install hellowindow demo as a default QT APP on all platforms
-do_install () {
+do_install_imx () {
     install -d ${D}/${datadir}/pixmaps
     install -d ${D}/${datadir}/applications
     install -m 0644 ${WORKDIR}/hellowindow.png ${D}/${datadir}/pixmaps

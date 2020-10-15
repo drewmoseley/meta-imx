@@ -1,5 +1,6 @@
 # Copyright 2019 NXP
 # Released under the MIT license (see COPYING.MIT for the terms)
+COMPATIBLE_MACHINE = "(mx6|mx7|mx8)"
 
 DESCRIPTION = "Package group for i.MX Qt5"
 LICENSE = "MIT"

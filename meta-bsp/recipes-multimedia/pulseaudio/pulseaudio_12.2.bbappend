@@ -1,4 +1,4 @@
-FILESEXTRAPATHS_prepend := "${THISDIR}/${PN}:"
+FILESEXTRAPATHS_prepend_imx := "${THISDIR}/${PN}:"
 
 IMX_PATCHES = " file://0001-Fix-pulseaudio-mutex-issue-when-do-pause-in-gstreame.patch \
                 file://0002-alsa-mixer-make-the-mono-mapping-a-fallback-only.patch \
@@ -8,7 +8,7 @@ SRC_URI_append_mx7 = "${IMX_PATCHES}"
 SRC_URI_append_mx8 = "${IMX_PATCHES}"
 
 # Enable allow-autospawn-for-root as default
-PACKAGECONFIG_append = " autospawn-for-root"
+PACKAGECONFIG_append_imx = " autospawn-for-root"
 
 # This default setting should be added on all i.MX SoC,
 # For now, the setting for mx6(including mx6ul & mx6sll)/mx7 has been upstreamed

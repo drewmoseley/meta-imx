@@ -3,6 +3,7 @@ DESCRIPTION = "RenderDoc is a frame-capture based graphics debugger"
 HOMEPAGE = "https://github.com/baldurk/renderdoc"
 LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://LICENSE.md;md5=df7ea9e196efc7014c124747a0ef9772"
+COMPATIBLE_MACHINE = "(mx6|mx7|mx8)"
 
 SRCREV = "a56af589d94dc851809fd5344d0ae441da70c1f2"
 SRC_URI = "git://github.com/baldurk/${BPN}.git;protocol=http;branch=v1.x \

@@ -1,5 +1,7 @@
 require xserver-xorg.inc
 
+COMPATIBLE_MACHINE = "(mx6|mx7|mx8)"
+
 SRC_URI += "file://0001-xf86pciBus.c-use-Intel-ddx-only-for-pre-gen4-hardwar.patch \
            file://pkgconfig.patch \
            file://0001-test-xtest-Initialize-array-with-braces.patch \

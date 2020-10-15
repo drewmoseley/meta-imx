@@ -1,6 +1,6 @@
 # Copyright 2018-2019 NXP
-
 require firmware-qca_${PV}.inc
+COMPATIBLE_MACHINE = "(mx6|mx7|mx8)"
 
 SUMMARY = "Qualcomm Wi-Fi and Bluetooth firmware"
 DESCRIPTION = "Qualcomm Wi-Fi and Bluetooth firmware for modules such as QCA6174A"
